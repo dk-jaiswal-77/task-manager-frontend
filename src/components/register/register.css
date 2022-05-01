@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    text-align: center;
+}
+
+.small_container{
+    width: 32%;
+    margin: 3% auto;
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.entry{
+    padding: 1.8%;
+}
+
+.btn{
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.btn:hover{
+    background-color: rgb(39, 37, 37);
+}
+
+.btn:active{
+    background: black;
+}
