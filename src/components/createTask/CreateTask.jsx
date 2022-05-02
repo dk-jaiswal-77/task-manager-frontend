@@ -54,9 +54,9 @@ export default function CreateTask(){
                     title : "",
                     description : "",
                     date : "",
-                    status : "todo",
+                    status : "",
                     official : false, 
-                    personal : true, 
+                    personal : false, 
                     others : false
                 });
                 setSubtaskContent("");
