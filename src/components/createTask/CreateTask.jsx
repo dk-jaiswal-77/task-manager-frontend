@@ -1,5 +1,4 @@
 import "./createTask.css";
-import {RiDeleteBin6Line} from "react-icons/ri";
 
 import { useState } from "react";
 
@@ -7,14 +6,13 @@ import { nanoid } from "nanoid";
 
 export default function CreateTask(){
 
-    // let subtasks = [{content : "subtask 1", checked : false, id:"1"}, {content : "subtask 2", checked : true, id:"2"}];
-
     const backend_url = "https://task-manager-dkjaiswal77.herokuapp.com";
 
     const [task, setTask] = useState({
         title : "",
         description : "",
-        status : "todo",
+        date : "",
+        status : "",
         official : false, 
         personal : false, 
         others : false
@@ -55,9 +53,10 @@ export default function CreateTask(){
                 setTask({
                     title : "",
                     description : "",
+                    date : "",
                     status : "todo",
                     official : false, 
-                    personal : false, 
+                    personal : true, 
                     others : false
                 });
                 setSubtaskContent("");
@@ -82,6 +81,13 @@ export default function CreateTask(){
         setSubtasks([...subtasks, subtask]);
     }
 
+    function deleteSubtask(e){
+        // console.log(e.target);
+        // console.log(subtasks.filter((subtask) => (subtask.id !== e.target.id)));
+        let compare_id = e.target.getAttribute("reqid");
+        setSubtasks(subtasks.filter((subtask) => (subtask.id !== compare_id)));
+    }
+
     return (
         <div className="right_container">
 
@@ -91,21 +97,23 @@ export default function CreateTask(){
 
                 <textarea id="description" rows="10" className="entry" value={task.description} placeholder="enter description of task" onChange={updateTask} ></textarea>
 
+                <input type="date" id="date" className="entry" value={task.date} onChange={updateTask} />
+
                 <div className="task_status_container">
                     <span>Choose task status</span>
 
                     <div className="option">
-                        <input type="radio" className="radio" name="status" id="todo" onClick={updateTask} />
+                        <input type="radio" className="radio" name="status" id="todo" checked = {task.status === "todo"} onChange={updateTask} />
                         <label htmlFor="todo">Todo</label>
                     </div>
 
                     <div className="option">
-                        <input type="radio" className="radio" name="status" id="inprogress" onClick={updateTask} />
+                        <input type="radio" className="radio" name="status" id="inprogress" checked = {task.status === "inprogress"} onChange={updateTask} />
                         <label htmlFor="inprogress">In progress</label>
                     </div>
 
                     <div className="option">
-                        <input type="radio" className="radio" name="status" id="done" onClick={updateTask} />
+                        <input type="radio" className="radio" name="status" id="done" checked = {task.status === "done"} onChange={updateTask} />
                         <label htmlFor="done">Done</label>
                     </div>
                 </div>
@@ -143,12 +151,12 @@ export default function CreateTask(){
                 <div className="subtasks">
                     {subtasks.map((subtask) => {
                         return(
-                            <div key={subtask.id} className={`subtask ${subtask.id}`}>
+                            <div key={subtask.id} className={`subtask`}>
                                 <label htmlFor={subtask.id} className="subtask_label">
                                     <input type="checkbox" id={subtask.id} />
                                     <span>{subtask.content}</span>
                                 </label>
-                                <RiDeleteBin6Line className="delete_icon"/>
+                                <span className={`delete_icon`} reqid={subtask.id} onClick={deleteSubtask}>Delete</span>
                             </div>
                         );
                     })}

@@ -35,7 +35,7 @@ export default function Login(){
                 localStorage.setItem("task_manager_token", JSON.stringify(res_data.token));
                 localStorage.setItem("task_manager_user", JSON.stringify(res_data.user));
 
-                navigate("/tasks");
+                navigate("/tasks/displayTask");
             }
         }catch(error){
             console.log(error);

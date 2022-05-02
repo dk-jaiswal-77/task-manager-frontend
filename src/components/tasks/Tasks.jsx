@@ -14,8 +14,8 @@ export default function Tasks(){
 
             <Routes>
                 <Route path="/createTask" element={< CreateTask />} />
-                <Route path="/displayTask" element={< DisplayTask />} />
                 <Route path="/editTask" element={< EditTask />} />
+                <Route path="/displayTask" element={< DisplayTask />} />
             </Routes>
 
         </div>

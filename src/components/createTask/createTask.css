@@ -45,6 +45,11 @@
     align-items: center;
 }
 
+.option:hover{
+    border-color: #ed0331;
+    background-color: rgb(251, 233, 236);
+}
+
 .createBtn{
     padding: 1rem 2rem;
     border: 2px solid black;
@@ -110,6 +115,11 @@
     gap: 1rem;
 }
 
+.subtask:hover{
+    border-color: #ed0331;
+    background-color: rgb(251, 233, 236);
+}
+
 .subtask_label{
     /* border: 1px solid red; */
     flex-grow: 1;
@@ -119,5 +129,19 @@
 }
 
 .delete_icon{
-    font-size: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+}
+
+.delete_icon:hover{
+    background: black;
+    color: white;
+}
+
+.delete_icon:active{
+    background: white;
+    color: black;
 }

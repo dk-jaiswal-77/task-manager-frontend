@@ -1,8 +1,14 @@
 import "./sidebar.css";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default function Sidebar(){
 
     let user = JSON.parse(localStorage.getItem("task_manager_user"));
+
+    const navigate = useNavigate();
+
+    const categories = useSelector((state) => (state.categories.categories));
 
     return (
         <div className="sidebar_container">
@@ -16,32 +22,42 @@ export default function Sidebar(){
 
                 <div className="taskCategories_container sidebar_small_container">
 
-                    <div>
+                    <div className="category">
                         <span>All</span>
-                        <span>0</span>
+                        <span>{categories.all}</span>
                     </div>
 
-                    <div>
+                    <div className="category">
                         <span>Personal</span>
-                        <span>0</span>
+                        <span>{categories.personal}</span>
                     </div>
 
-                    <div>
+                    <div className="category">
                         <span>Official</span>
-                        <span>0</span>
+                        <span>{categories.official}</span>
                     </div>
 
-                    <div>
+                    <div className="category">
                         <span>Others</span>
-                        <span>0</span>
+                        <span>{categories.others}</span>
                     </div>
 
                 </div>
 
             </div>
 
-            <div className="logout_container sidebar_small_container">
-                Log Out
+            <div className="sidebar_navigation_container">
+                <div className="sidebar_small_container logout_container" onClick={()=>{
+                    navigate("/tasks/displayTask");
+                }}>Home</div>
+                <div className="sidebar_small_container logout_container" onClick={()=>{
+                    navigate("/tasks/createTask");
+                }}>Create Task</div>
+                <div className="logout_container sidebar_small_container" onClick={()=>{
+                    localStorage.removeItem("task_manager_user");
+                    localStorage.removeItem("task_manager_token");
+                    navigate("/");
+                }}>Log Out</div>
             </div>
 
         </div>

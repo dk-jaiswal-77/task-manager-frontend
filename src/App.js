@@ -5,7 +5,7 @@ import Tasks from './components/tasks/Tasks';
 
 import {Routes, Route} from "react-router-dom";
 
-//backend_url = https://task-manager-dkjaiswal77.herokuapp.com/
+//backend_url = https://task-manager-dkjaiswal77.herokuapp.com
 
 function App() {
   return (
