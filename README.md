@@ -53,20 +53,29 @@ User is required to signup first. On successful login, he is directed to main pa
 
 ## Log-In Page
 
-![Log In](https://user-images.githubusercontent.com/92107053/164013383-918709b0-53fe-42c3-81d5-4a5e3b8bb00c.png)
+![LogIn](https://user-images.githubusercontent.com/92107053/166729066-82de00e4-cdc9-4ccb-abdb-9f95e7e02f23.png)
 
 ## Sign-Up Page
 
-![Main Page](https://user-images.githubusercontent.com/92107053/164013404-ca29a4f2-5a0b-4416-83b5-8f1d266e18f6.png)
+![SignUp](https://user-images.githubusercontent.com/92107053/166729034-61c1eaf0-e969-4dae-97f2-654f2dc9b095.png)
 
 ## Main Page
 
-![Add Flat Page](https://user-images.githubusercontent.com/92107053/164013262-b32a6cb3-9ef2-4a92-bd3e-97b62d01e662.png)
+![mainPage](https://user-images.githubusercontent.com/92107053/166729096-3c642d31-ce57-432b-8c7c-5910c775b618.png)
 
 ## Edit Task Page
 
-![Edit Flat Page](https://user-images.githubusercontent.com/92107053/164013290-fd996480-7b1b-4b5a-806f-34d053dbe79c.png)
+![editTaskPage](https://user-images.githubusercontent.com/92107053/166729126-24183fa5-9056-475b-aaf5-da08520afa8f.png)
 
 ## Create Task Page
-![Residents Page](https://user-images.githubusercontent.com/92107053/164013419-858d691b-5537-4ccb-b236-f773e53b1b4f.png)
+![createTaskPage](https://user-images.githubusercontent.com/92107053/166729112-273a18ce-4480-41d7-b0f8-df1902bf4093.png)3b1b4f.png)
+
+
+
+
+
+
+
+
+
 
