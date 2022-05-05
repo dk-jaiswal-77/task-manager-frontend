@@ -1,7 +1,7 @@
 # Task Manager
 
 <p>
-  It is an web application that allows user to create task with subtasks, edit, update and delete task. This app self categories the task into three categories (i.e. todo, inprogress & done) on the basis of status of task and automatically chages the status of task upon completion of subtasks. The app also show statistics relatead to different labels like official, personal & others.  
+  It is a web application that allows user to create task with subtasks, edit, update and delete task. This app self categories the task into three categories (i.e. todo, inprogress & done) on the basis of status of task and automatically chages the status of task upon completion of subtasks. The app also show statistics relatead to different labels like official, personal & others.  
 <p/>
 
 ---
